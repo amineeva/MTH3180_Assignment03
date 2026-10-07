@@ -1,3 +1,5 @@
+% One step of Euler
+
 %This function computes the value of X at the next time step
 %using the Forward Euler approximation
 %INPUTS:
@@ -13,5 +15,13 @@
 % rate_func_in when computing the next step
 function [XB,num_evals] = forward_euler_step(rate_func_in,t,XA,h)
     %your code here
+    % derivative at current point for tangent line
+    dXdt = rate_func_in(t,XA);
+
+    % find the next point using the tangent line
+    XB = XA + h*dXdt; % this is a column vector
+
+    % num_evals? -> no loop so this only runs once
+    num_evals = 1;
     
 end
