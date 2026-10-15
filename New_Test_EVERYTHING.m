@@ -72,6 +72,7 @@ X0 = 1;
 subplot(4, 1, 1);
 hold on;
 xlim(tspan);
+ylim([-2,2]);
 % exact solution
 t_exact = linspace(tspan(1), tspan(2), 1000);
 plot(t_exact, solution01(t_exact), 'k', 'LineWidth', 2.5, 'DisplayName', 'Exact');
@@ -167,6 +168,7 @@ X0 = 1;
 subplot(4, 1, 2);
 hold on;
 xlim(tspan);
+ylim([-2,2]);
 % exact solution
 t_exact = linspace(tspan(1), tspan(2), 1000);
 plot(t_exact, solution01(t_exact), 'k', 'LineWidth', 2.5, 'DisplayName', 'Exact');
@@ -379,6 +381,7 @@ grid on;
 box on;
 
 hold off;
+
 
 
 
